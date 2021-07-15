@@ -33,7 +33,13 @@ for(var i=0; i<button.length; i++){
         }
         else if(value == '='){
             num2 = parseFloat(display.innerHTML);
-            display.innerHTML = eval(num1 + operator + num2);
+            let result = eval(num1 + operator + num2);
+            if(result == Infinity || result == -Infinity){
+                display.innerHTML = 'Error';
+            }
+            else{
+                display.innerHTML = result;
+            }
         }
         else if(value == 'ac'){
             display.innerHTML = '';
