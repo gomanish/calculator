@@ -53,3 +53,33 @@ for(var i=0; i<button.length; i++){
         }
     });
 }
+
+// for keyboard events
+
+document.addEventListener('keydown', function(e){
+    let value = e.key;
+    if(value == '+'){
+        button[15].click();
+    }
+    else if(value == '-'){
+        button[11].click();
+    }
+    else if(value == '*'){
+        button[7].click();
+    }
+    else if(value == '/'){
+        button[3].click();
+    }
+    else if(value == '%'){
+        button[2].click();
+    }
+    else if(value == '='){
+        button[18].click();
+    }
+    else if(value == 'Enter'){
+        button[18].click();
+    }
+    else if(value == '.' || value == '0' || value == '1' || value == '2' || value == '3' || value == '4' || value == '5' || value == '6' || value == '7' || value == '8' || value == '9'){
+        display.innerHTML += value;
+    }
+});
